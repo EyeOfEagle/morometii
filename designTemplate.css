@@ -1,0 +1,399 @@
+/* main.html + general page style */
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	min-height:1000px;
+	height:100%;
+	position:relative;
+	background-color:#001f3f;
+}
+
+.bar
+{
+	position:relative;
+	width:100%;
+	height:60px;
+	background-color:black;
+}
+
+.wholeMenu
+{
+	margin-right:2%;
+}
+
+.menu {
+  float:right; /* right corner */
+  position: relative; /* for placing content below button using pos:absolute */
+/*  display: inline-block;*/ /* view:element1 element2 */
+  transition:1s ease;
+}
+
+.headButton{
+  display: block;
+  background-color:black;
+  color:white;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:15px;
+  padding-right:15px;
+  transition:1s ease;
+  font-family:Arial;
+}
+
+/* .headButton2{
+  display: block;
+  background-color:black;
+  color:white;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-left:15px;
+  padding-right:15px;
+  transition:1s ease;
+  font-family:Arial;
+} */
+
+.headButtonContent {
+  position: absolute;
+  display: none;
+  width:125px; /* -> fixed width; not depending on headButton size; */
+  text-align:center;
+  background-color:#29B6F6;
+  color:white;
+  font-family:Arial;
+  transition:1s ease;
+}
+
+.subheadButtonContent
+{
+	text-decoration:none;
+    padding-top:15px;
+	padding-bottom:15px; 
+    color:white;
+	display:block;	/* something with width:100% and background from headButtonContent */
+    transition:1s ease;
+	border: 2px solid black;
+	border-right:0;
+	border-left:0;
+	float:left;
+	width:100%; /* -> width:125px for border */
+}
+
+.headButtonContent .subheadButtonContent:hover{
+	background-color: blue;
+}
+
+.headButton:hover{
+	background-color:white;
+    color:black;
+	cursor:pointer;
+	padding-left:30px;
+	padding-right:30px;
+}
+
+/* .headButton2:hover{
+	background-color:white;
+    color:black;
+	cursor:pointer;
+} */
+
+.menu:hover .headButtonContent {
+  display: block;
+  box-shadow: 5px 5px 20px black;
+}
+
+
+.customizedBanner{
+	position:absolute;
+	height:70px;
+	width:200px;
+	left:5%;
+	z-index:1;
+}
+
+.writtenPart
+{
+	position:relative;
+	margin-top:50px;
+	margin-left:15%;
+	margin-right:15%;
+	color:white;
+}
+
+.writtenPart p
+{
+	/* font-family:Georgia; */
+	font-family: Gabriola;
+	font-size: 20pt;
+	word-spacing: -1px;
+	text-indent:50px;
+	text-align:justify;
+}
+
+.writtenPart ul
+{
+	/* font-family:Georgia; */
+	font-family: Gabriola;
+	font-size: 20pt;
+	word-spacing: -1px;
+	text-indent:50px;
+	text-align:justify;
+}
+
+.writtenPart p::first-letter
+{
+	font-weight:900;
+	font-size:25pt;
+}
+
+.writtenPart h1
+{
+	margin-top:0;
+	margin-bottom:30px;
+	margin-left:0px;
+	margin-right:0px;
+	font-family:Gabriola;
+	font-size:30pt;
+	font-weight:900;
+}
+
+.rightPart
+{
+	font-family: Gabriola;
+	font-size: 25pt;
+	line-height:70px;
+	word-spacing: -1px;
+	text-align:center;
+	color:white;
+	width:400px;
+	height:490px;
+	text-align:center;
+	display:inline-block;
+	margin-bottom:100px;
+	margin-left:6%;
+	margin-right:5%;
+	animation:10s appear;
+	transition:1s ease;
+}
+
+@keyframes appear{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+
+.painting{
+	margin:0;
+	position:relative;
+	float:left;
+	display:block;
+	width:580px;
+	height:490px;
+	margin-left:8%;
+	margin-top:50px;
+	margin-bottom:100px;
+}
+
+.image-container-frame{
+	position:absolute;
+	display:block;
+	width:580px;
+	height:490px;
+	z-index:-1;
+	box-shadow: 25px 25px 20px black;
+}
+
+.image-container{
+	position:absolute;
+	width:400px;
+	margin-top:93px;
+	margin-left:91px;
+	height:300px; 
+	overflow:hidden;
+}
+.image-container-content{
+	display:flex;
+	animation: try 30s infinite;
+	transition:2s ease;
+}
+
+.slide-image-dimensions{
+	width:400px;
+	height:300px;
+}
+
+@keyframes try{
+	0%{transform:translateX(0);opacity:0;}
+	10%{transform:translateX(0);opacity:1;}
+	20%{transform:translateX(0);opacity:1;}
+	23%{transform:translateX(0);opacity:0;}
+	25%{transform:translateX(-400px);opacity:0;}
+	30%{transform:translateX(-400px);opacity:1;}
+	40%{transform:translateX(-400px);opacity:1;}
+	45%{transform:translateX(-400px);opacity:0;}
+	50%{transform:translateX(-800px);opacity:0;}
+	60%{transform:translateX(-800px);opacity:1;}
+	70%{transform:translateX(-800px);opacity:1;}
+	73%{transform:translateX(-800px);opacity:0;}
+	75%{transform:translateX(-1200px);opacity:0;}
+	80%{transform:translateX(-1200px);opacity:1;}
+	90%{transform:translateX(-1200px);opacity:1;}
+	100%{transform:translateX(-1200px); opacity:0;}
+}
+
+.bottomPage{
+	position:absolute;
+	bottom:0;
+	height:30px;
+	width:100%;
+	padding-top:10px;
+	background-color:#101010;
+	color:white;
+	text-align:center;
+	font-family:Arial;
+}
+
+.upButton{
+	position:fixed;
+	float:right;
+	bottom:40px;
+	left:90%;
+}
+
+/* autor.html page style */
+
+.biografieImg{
+	margin-right:40px;
+	height:300px;
+	width:250px;
+	box-shadow:10px 10px 15px black;
+}
+
+.boxImg
+{
+	font-family:Gabriola;
+	text-align:center;
+	height:350px;
+	width:250px;
+	float:left;
+	margin-right:40px;
+}
+
+.reveal{
+	animation:5s appear;
+	transition:1s ease;
+}
+
+/* creatiaArtistica.html page style */
+
+	.image-container2{
+		border-bottom:20px solid grey; 
+		border-right:20px solid #383838;
+		position:relative;
+		margin-left:100px;
+		margin-top:100px;
+		display:block;
+		width:300px;
+		height:400px;
+		outline:1px solid black;
+		overflow:hidden;
+	    box-shadow:5px 5px 10px black;
+	}
+	.image-container-content2{
+		position:relative;
+		display:flex; 
+		width:300px;
+		height:400px;
+		animation: try2 30s infinite;
+		transition:2s ease;
+	}
+	.slide-image-dimensions2{
+	width:300px;
+	height:400px;
+}
+.painting2{
+	margin:0;
+	position:relative;
+	display:block;
+	width:300px;
+	height:400px;
+	margin-bottom:100px;
+}
+
+	@keyframes try2{
+		0%{transform:translateX(0);opacity:0;}
+		10%{transform:translateX(0);opacity:1;}
+		20%{transform:translateX(0);opacity:1;}
+		23%{transform:translateX(0);opacity:0;}
+		25%{transform:translateX(-300px);opacity:0;}
+		30%{transform:translateX(-300px);opacity:1;}
+		40%{transform:translateX(-300px);opacity:1;}
+		45%{transform:translateX(-300px);opacity:0;}
+		50%{transform:translateX(-600px);opacity:0;}
+		60%{transform:translateX(-600px);opacity:1;}
+		70%{transform:translateX(-600px);opacity:1;}
+		73%{transform:translateX(-600px);opacity:0;}
+		75%{transform:translateX(-900px);opacity:0;}
+		80%{transform:translateX(-900px);opacity:1;}
+		90%{transform:translateX(-900px);opacity:1;}
+		100%{transform:translateX(-900px);opacity:0;}
+	}
+	
+/* comentariu.html page style */
+
+/* personaje.html page style*/
+
+.painting3{
+	margin:0;
+	position:relative;
+	display:block;
+	width:600px;
+	height:400px;
+	margin-bottom:100px;
+}
+
+.image-container-frame3{
+	position:absolute;
+	display:block;
+	width:600px;
+	height:500px;
+	z-index:-1;
+	box-shadow: 25px 25px 20px black;
+}
+
+.image-container3{
+	position:absolute;
+	display:block;
+	width:600px;
+	height:400px;
+	outline:1px solid black;
+    overflow:hidden;
+}
+.image-container-content3{
+	position:relative;
+	display:flex; 
+	width:600px;
+	height:400px;
+	animation: try3 20s infinite;
+	transition:2s ease;
+}
+.slide-image-dimensions3{
+	margin-top:100px;
+	width:600px;
+	height:300px;
+}
+
+	@keyframes try3{
+		0%{transform:translateX(0);opacity:0;}
+		10%{transform:translateX(0);opacity:1;}
+		20%{transform:translateX(0);opacity:1;}
+		23%{transform:translateX(0);opacity:0;}
+		33%{transform:translateX(-600px);opacity:0;}
+		40%{transform:translateX(-600px);opacity:1;}
+		50%{transform:translateX(-600px);opacity:1;}
+		60%{transform:translateX(-600px);opacity:0;}
+		66%{transform:translateX(-1200px);opacity:0;}
+		80%{transform:translateX(-1200px);opacity:1;}
+		90%{transform:translateX(-1200px);opacity:1;}
+		100%{transform:translateX(-1200px);opacity:0;}
+	}
+	
